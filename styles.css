@@ -1,0 +1,509 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /*--------------Header Css-------------*/
+  
+  header {
+    height: 340px;
+    background-image: linear-gradient(to right, red , white , red);
+  }
+  
+  .title {
+    padding: 20px;
+    text-align: center;
+    color: #8B0000;
+  }
+  
+  .leaf {
+    font-size: 150px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  
+  h1 {
+    font-family: 'Baskervville', serif;
+    font-size: 40px;
+  }
+  
+  /*------------------------------------*/
+  
+
+  /*-------------Navbar Css--------------*/
+  
+  nav {
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    height: auto;  
+  }
+  
+  .nav-header {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .nav-toggle {
+    font-size: 1.5rem;
+    color: red;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+  }
+  .nav-toggle:hover {
+    color: white;
+    transform: rotate(90deg);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .links a {
+    color: white;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+  }
+  .links a:hover {
+    background-color: red;
+    padding-left: 1.5rem;
+  }
+  
+  .links {                               /*JavaScript-Css*/
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear; 
+  }
+  
+  .show-links {                          /*JavaScript-Css*/
+    height: 20rem;
+  }
+  
+  @media screen and (min-width: 800px) {             /*For longer version*/
+    .nav-center {
+      max-width: 1170px;    
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      padding-right: 300px;    
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links {
+      height: auto;
+      display: flex;
+    }
+    .links li {    
+    border-right:1px solid red;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.7rem;         /*change to add space in between of the navbar links*/
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+      color: red;
+    }
+    /*.line {
+      border-right:1px solid red;
+      float: left;
+    }*/
+  }
+  
+  /*------------------------------------*/
+  
+
+  /*--------------About Css-------------*/
+  
+  .intro{
+    background-color: #FF474C;
+    background-color: #FF7F7F;
+  }
+  
+  .intro > h2 {
+    padding-top: 20px;
+  }
+  
+  .about {
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+  }
+
+  /*------------------------------------*/
+  
+
+  /*-----------Question-Css------------*/
+  
+  main {
+    background-color: #FF7F7F;
+    border-bottom: 2px solid black;
+  }
+  
+  .title h2 {
+    color: black;
+    text-align: center;
+  }
+  .section-center {
+    max-width: 620px;  /*500*/
+  }
+  .question {
+    background: #fff;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 15px rgba(139, 8, 8, 0.5);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .question:hover {
+    box-shadow: 0 5px 15px rgba(136, 8, 8, 0.9);
+  }
+  
+  .question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+  }
+  
+  .question-title p {
+    margin-bottom: 0;
+    letter-spacing: 0.25rem;
+    color: hsl(209, 61%, 16%);
+  }
+  .question-btn {
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: rgb(210, 43, 43);
+    transition: all 0.3s linear;
+  }
+  .question-btn:hover {
+    transform: rotate(90deg);
+  }
+  .question-text {
+    padding: 1rem 0 1.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .question-text p {
+    margin-bottom: 0;
+  }
+  /* hide text */
+  .question-text {
+    display: none;
+  }
+  .show-text .question-text {
+    display: block;
+  }
+  .minus-icon {
+    display: none;
+  }
+  .show-text .minus-icon {
+    display: inline;
+  }
+  .show-text .plus-icon {
+    display: none;
+  }
+  
+  .section-center {
+    width: 80vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+  @media screen and (min-width: 992px) {
+    .section-center {
+      width: 85vw;
+    }
+  }
+  main {
+    min-height: 77vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  /*------------------------------------*/
+
+  
+  /*-----------Review-Area Css------------*/
+  
+  .review-area {
+    min-height: 80vh;   
+    display: grid;
+    place-items: center;
+    background-color: #B22222;
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+  }
+  
+  .container-review {
+    width: 80vw;
+    max-width: 620px;
+  }
+  
+  .review-title {
+   margin-bottom: 1.5rem;
+   color: white; 
+   margin-top: 15px;
+  }
+  
+  .review {
+    background: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s linear;
+    text-align: center;
+    margin-bottom: 6px;    /*new*/
+  }
+  .review:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 3.9);
+  }
+  .img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+  #person-img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+  }
+  .img-container::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10e";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translateY(25%);
+    background: #B22222;
+    color: #fff;
+  }
+  .img-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #B22222;
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    border-radius: 50%;
+  }
+  
+  h4 {
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.875rem;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .review-title {
+      margin-top: 0px;
+      padding-top: 14px;
+  }
+    h4 {
+      line-height: 1;
+      font-size: 1rem;
+    }
+  }
+  
+  #author {
+    margin-bottom: 0.25rem;
+  }
+  #job {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: #B22222;
+    font-size: 0.85rem;
+  }
+  #info {
+    margin-bottom: 0.75rem;
+  }
+  .prev-btn,
+  .next-btn {
+    color: rgba(178, 34, 34, 70%);
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 1.2rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+  }
+  .prev-btn:hover,
+  .next-btn:hover {
+    color: #B22222;
+  }
+  
+  /*------------------------------------*/
+
+  
+  /*-----------Rating-Area Css------------*/
+  
+  .rating-area {
+    min-height: 35vh;
+    display: grid;
+    place-items: center;           
+    background-color: #FF7F7F;
+  }
+  
+  .container-rating {
+    text-align: center;
+  }
+  
+  h2 {
+    letter-spacing: all 0.3s linear;
+    text-transform: capitalize;
+    line-height: 1.15;
+    margin-bottom: 0.20rem;
+    font-family: "Gloria Hallelujah", sans-serif;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: center;
+  }
+  
+  #value {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  
+  .btn-rating {
+    text-transform: uppercase;
+    background: transparent;
+    color: #222;
+    padding: 0.575rem 0.85rem;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    transition: all 0.3s linear;
+    font-size: 0.875rem;
+    border: 2px solid #222;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 0.95rem;
+    margin: 0.5rem;
+  }
+  
+  .btn-rating:hover {
+    color: #fff;
+    background: black;
+    border: 2px solid #343434;
+  }
+  
+  /*------------------------------------*/
+  
+  
+  /*--------------Background Color Change-Css------------------*/
+  
+  .background-color-change-area {
+    min-height: calc(100vh - 5rem);  
+    display: grid;
+    place-items: center;
+    border: 6px dotted black;
+  }
+  .container-colored {
+    text-align: center;
+  }
+  .container-colored h3 {
+    background: black;  
+    color: #fff;      
+    padding: 1rem;
+    border-radius: 1.25rem;   
+    margin-bottom: 2.5rem;
+  }
+  .color {
+    color: red;
+  }
+  .btn-hero {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    font-weight: 700;
+    transition: all 0.3s linear;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 1.2);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  .btn-hero:hover {
+    border: 1.5px solid black;
+  }
+
+  /*------------------------------------*/
+
+  
+  /*--------------Empty-Div-------------*/
+  
+  .space-div {
+    height: 60px;
+    color: black;
+    background-color: black;
+  }
+  
+  /*------------------------------------*/
+  
+  
+  /*-------------Footer-Css-------------*/
+  
+  footer {
+    height: 130px;
+    background-image: linear-gradient(to right, red , white , red);
+    text-align: center;
+    color: #8B0000;
+    padding-top: 25px;
+  }
+  
+  .icon {         
+    color: #8B0000;
+  }
+  
+  .end {
+    padding-top: 30px;
+  }
+  
+  /*------------------------------------*/
